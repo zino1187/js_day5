@@ -14,12 +14,17 @@ input{
 }
 </style>
 <script>
+
 function createEnemy(){
+	var n=document.getElementById("txt").value;
+
 	//stage라는 id를 갖는 dom 요소안에 img 돔을 생성하여 붙이되
 	//입력받은 횟수만큼....
 	var stage=document.getElementById("stage");
-	
-	for(var i=1;i<=10;i++){
+	//기존에 stage 안쪽의 dom 들을 싹~~~제거
+	stage.innerText="";
+
+	for(var i=1;i<=n;i++){
 		//이미지dom 객체생성
 		var img=document.createElement("img");
 		img.src="../res/enemy.png";
@@ -32,7 +37,7 @@ function createEnemy(){
 </script>
 </head>
 <body>
-	<input type="text" placeholder="적군수 입력"/>
+	<input type="text" id="txt" placeholder="적군수 입력"/>
 	<button onClick="createEnemy()">생성하기</button>
 	<div id="stage"></div>
 </body>
