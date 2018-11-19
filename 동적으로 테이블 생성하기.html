@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>동적으로 테이블 생성하기</title>
+<script>
+/*
+prompt()로 층수와 호수,너비,보더를 입력받아 알맞는 아파트 출력!!
+*/
+function init(){
+	var f=prompt("원하시는 층수를 입력하세요");
+
+	//document.write("어머님이 \"밥먹어\"라고 말씀하셨다");
+	document.write("<table width='400px' border='1px' align='center'>");
+	for(var a=1;a<=25;a++){
+		document.write("<tr>");
+		for(var i=1;i<=30;i++){
+			document.write("<td>104</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+}
+</script>
+</head>
+<body onLoad="init()">
+</body>
+</html>
